@@ -1,4 +1,8 @@
 @font-face {
+  font-family: "Muller-light";
+  src: url("/fonts/Fontfabric - MullerLight.otf"); }
+
+@font-face {
   font-family: "Muller-regular";
   src: url("/fonts/Fontfabric - MullerRegular.otf"); }
 
@@ -329,3 +333,50 @@ section#slide7 {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
     background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
     background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%); }
+
+.gallery {
+  margin-top: 7.63889vh;
+  position: relative; }
+  .gallery .mask-left, .gallery .mask-right {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    z-index: 1000; }
+  .gallery .mask-left {
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(255, 255, 255, 0.95)), to(rgba(255, 255, 255, 0.3)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.3) 100%); }
+  .gallery .mask-right {
+    right: 0;
+    background: -webkit-gradient(linear, right top, left top, color-stop(30%, rgba(255, 255, 255, 0.95)), to(rgba(255, 255, 255, 0.3)));
+    background: -webkit-linear-gradient(right, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.3) 100%); }
+
+#slide4 {
+  padding-left: 0; }
+  #slide4 .content {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    #slide4 .content h2 {
+      padding-left: 19.53125%; }
+
+.item img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1); }
+
+.fname {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  font-family: "Muller-light";
+  font-size: 1.79687vw; }
+  .fname .lname {
+    font-family: "Muller-bold";
+    font-size: 1.79687vw;
+    letter-spacing: .3em; }
+
+.gallery-nav {
+  left: 50%;
+  z-index: 2000; }
