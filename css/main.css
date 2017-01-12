@@ -73,6 +73,7 @@
     margin-top: 0.3125vw; }
 
 section {
+  width: 100vw;
   padding-left: 19.53125%; }
 
 section#slide1 {
