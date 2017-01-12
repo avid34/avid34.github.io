@@ -45,13 +45,13 @@ $(document).ready(function() {
 
 
 function showmenu(time){
-	$('.popup-menu').animate({'right':'0', 'background-position':'0'},time);
+	$('.popup-menu').show().animate({'right':'0', 'background-position':'0'},time);
 	$('.fmenu-burger>img').removeClass('f-open').addClass('f-close');
 	$('.content, .fmenu-title, .social').css('filter','blur(5px)');
 }
 
 function hidemenu(time){
-	$('.popup-menu').animate({'right':'-100vw', 'background-position':'-100vw'},time);
+	$('.popup-menu').animate({'right':'-100vw', 'background-position':'-100vw'},time).hide();
 	$('.fmenu-burger>img').removeClass('f-close').addClass('f-open');
 	$('.content, .fmenu-title, .social').css('filter','none');
 }			

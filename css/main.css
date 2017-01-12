@@ -138,7 +138,8 @@ section#slide1 {
   background-repeat: repeat-y;
   background-position: -100vw;
   z-index: 8000;
-  right: -100vw; }
+  right: -100vw;
+  display: none; }
   .popup-menu .left-side, .popup-menu .right-side {
     position: absolute;
     width: 50vw;
