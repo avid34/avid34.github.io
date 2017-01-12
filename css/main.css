@@ -1,0 +1,330 @@
+@font-face {
+  font-family: "Muller-regular";
+  src: url("/fonts/Fontfabric - MullerRegular.otf"); }
+
+@font-face {
+  font-family: "Muller-bold";
+  src: url("/fonts/Fontfabric - MullerBold.otf"); }
+
+@font-face {
+  font-family: "Proxima-light";
+  src: url("/fonts/Proxima Nova Light.otf"); }
+
+@font-face {
+  font-family: "Proxima-medium";
+  src: url("/fonts/Proxima Nova Semibold.otf"); }
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-Demi.otf"); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.fmenu {
+  position: fixed;
+  z-index: 9000; }
+  .fmenu .fmenu-burger {
+    position: fixed;
+    right: 9.76563vw;
+    top: 6.25vw;
+    z-index: 9999; }
+  .fmenu .fmenu-title {
+    position: fixed;
+    font-family: "Avenir";
+    font-size: 1.5625vw;
+    left: 6.25vw;
+    top: 6.25vw; }
+    .fmenu .fmenu-title a {
+      text-decoration: none;
+      color: #150098; }
+
+.f-open, .f-close {
+  cursor: pointer; }
+
+.dl-block {
+  position: absolute;
+  top: 16.64063vw;
+  left: 6.25vw;
+  text-align: center;
+  width: 9.76563vw; }
+  .dl-block .dl-text {
+    font-family: "Muller-bold";
+    font-size: 14px;
+    -webkit-transform: rotateZ(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotateZ(270deg);
+    overflow: visible;
+    height: 9.76563vw; }
+  .dl-block .dl-size {
+    font-family: "Muller-regular";
+    font-size: 12px;
+    padding-top: 5px; }
+  .dl-block .dl-icon {
+    background-color: #1effbc;
+    width: 2.34375vw;
+    height: 2.34375vw;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin: 0 auto; }
+  .dl-block .dl-svg {
+    width: 1.17188vw;
+    margin-top: 0.3125vw; }
+
+section {
+  padding-left: 19.53125%; }
+
+section#slide1 {
+  position: relative;
+  background: #150098 url("/img/typewriter.jpg");
+  background-size: 100%;
+  font-size: 2.03125vw;
+  font-family: "Muller-regular";
+  color: #fff;
+  background-blend-mode: multiply; }
+
+#slide1 .content .s1 {
+  font-family: "Muller-regular";
+  font-size: 7.8125vw;
+  margin-bottom: 3.90625vw;
+  color: white; }
+
+.begin ul {
+  margin-left: 0;
+  padding: 0; }
+
+.begin ul li {
+  display: inline-block;
+  list-style: none;
+  border-top: 2px solid #00fabe;
+  border-bottom: 2px solid #00fabe;
+  padding: 14px 25px 10px 25px;
+  margin-right: 2.734375%;
+  font-size: 1.09375vw; }
+
+.begin a, .begin a:active, .begin a:visited {
+  color: white;
+  text-decoration: none; }
+
+.begin ul li:hover {
+  background-color: #00fabe; }
+
+.begin ul li:hover a {
+  color: black; }
+
+.begin a:hover {
+  color: black; }
+
+.popup-overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  right: -100vw;
+  z-index: 7900; }
+
+.popup-menu {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: #171420 url("/img/typewriter.jpg");
+  background-blend-mode: multiply;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position: -100vw;
+  z-index: 8000;
+  right: -100vw; }
+  .popup-menu .left-side, .popup-menu .right-side {
+    position: absolute;
+    width: 50vw;
+    height: 100vh; }
+  .popup-menu .left-side {
+    right: 50vw;
+    color: #1effbc;
+    font-family: "Muller-bold";
+    font-size: 1.875vw; }
+    .popup-menu .left-side p {
+      margin-top: 69.44444vh;
+      margin-left: 10.15625vw;
+      margin-right: 7.8125vw;
+      line-height: 1.5em; }
+    .popup-menu .left-side a {
+      color: #1effbc;
+      text-decoration: none; }
+    .popup-menu .left-side .udl {
+      border-bottom: 2px solid; }
+  .popup-menu .right-side {
+    right: 0;
+    background-color: #191623;
+    z-index: 8001; }
+    .popup-menu .right-side ul {
+      margin-left: 0;
+      list-style: none; }
+      .popup-menu .right-side ul li {
+        color: #fff;
+        padding-left: 5.46875vw;
+        line-height: 20vh;
+        font-family: "Muller-regular";
+        font-size: 1.64063vw;
+        letter-spacing: 0.3em;
+        text-transform: uppercase; }
+      .popup-menu .right-side ul li:hover {
+        background-color: #1c1927; }
+      .popup-menu .right-side ul li.active a {
+        color: #1effbc;
+        text-decoration: none; }
+      .popup-menu .right-side ul a {
+        color: #fff;
+        text-decoration: none; }
+
+.content {
+  color: #150098;
+  width: 58.59375vw; }
+  .content h2 {
+    font-size: 2.5vw;
+    font-family: "Muller-bold"; }
+  .content p {
+    font-family: "Proxima-light";
+    font-size: 2.1875vw;
+    margin-top: 3.51563vw;
+    letter-spacing: 0.01em;
+    line-height: 1.3em; }
+
+#slide2 .content ul {
+  margin-left: 0;
+  margin-top: 8.59375%; }
+  #slide2 .content ul li {
+    display: inline-block;
+    list-style: none;
+    font-family: "Muller-bold";
+    font-size: 0.9375vw;
+    margin-right: 7.8125%;
+    border-bottom: 2px solid;
+    padding: 0.78125vw;
+    letter-spacing: 0.15625vw; }
+
+.services .service-list {
+  list-style: none; }
+  .services .service-list .service-list-item {
+    display: inline-block;
+    margin-right: 2.34375%;
+    width: 15.625%;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 20px; }
+    .services .service-list .service-list-item hr {
+      border: none;
+      color: #00fabe;
+      background-color: #00fabe;
+      height: 2px;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    .services .service-list .service-list-item span {
+      padding-top: 20px;
+      font-family: "Muller-regular";
+      font-size: 1.40625vw; }
+    .services .service-list .service-list-item .service-list-image {
+      height: 4.6875vw;
+      margin: 0 auto;
+      display: block; }
+
+.test-popup {
+  position: relative;
+  background-color: white;
+  width: auto;
+  max-width: 320px;
+  margin: 20px auto;
+  padding: 20px; }
+
+section#slide7 {
+  background-color: #171420; }
+  section#slide7 .content {
+    color: #1effbc; }
+    section#slide7 .content p {
+      font-family: "Muller-bold";
+      font-size: 2.42188vw; }
+      section#slide7 .content p a {
+        color: #1effbc;
+        text-decoration: none; }
+      section#slide7 .content p a:hover {
+        text-decoration: underline; }
+
+.social {
+  position: fixed;
+  z-index: 7000;
+  left: 9.375vw;
+  top: 88.88889vh; }
+  .social svg {
+    width: 1.5625vw;
+    height: 1.5625vw;
+    fill: #150098; }
+
+.social-circle {
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+  border: 5px solid rgba(21, 0, 151, 0.2);
+  position: fixed;
+  z-index: 7000;
+  left: 6.25vw;
+  top: 83.33333vh; }
+
+.socbtn {
+  color: #fff;
+  background-color: #150097;
+  -webkit-border-radius: 2em;
+          border-radius: 2em;
+  padding: 1em; }
+
+.content, .fmenu-title, .social {
+  -webkit-transition-property: -webkit-filter;
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s; }
+
+.sidebar {
+  position: fixed;
+  left: 3.51563vw;
+  top: 30vh;
+  z-index: 2000;
+  width: 13.39286vw;
+  display: none; }
+  .sidebar .page-name {
+    font-family: "Proxima-medium";
+    font-size: 1.09375vw;
+    color: #cccae3;
+    margin: 0 auto;
+    width: 1em;
+    line-height: 1.5em;
+    text-align: center; }
+  .sidebar .page-number {
+    font-family: "Muller-regular";
+    font-size: 0.78125vw;
+    color: #cccae3;
+    padding-bottom: 2.5em;
+    text-align: center; }
+
+#slide5 .content {
+  position: relative; }
+  #slide5 .content p {
+    font-family: "Muller-bold";
+    font-size: 2.5vw; }
+  #slide5 .content .top-fade, #slide5 .content .bottom-fade {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    display: block;
+    z-index: 6000; }
+  #slide5 .content .top-fade {
+    top: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%); }
+  #slide5 .content .bottom-fade {
+    top: 70%;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%); }
