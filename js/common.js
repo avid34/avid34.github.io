@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	//Инициализируем fullpage.js
 	$('#fullpage').fullpage({
 		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
 		sectionsColor: ['#150098', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#171420'],
@@ -6,17 +7,24 @@ $(document).ready(function() {
 		navigation: true,
 		navigationTooltips: ['TextForce','Система','Услуги','Команда','Мы не','Блог','Напишите нам'],
 		afterLoad: function(link,index){
-			if (index == 1 || index == 7) {
+					if (index == 1 || index == 7) {
 				$('.fmenu-title>a').animate({'color':'#fff'},500);
-				$('.social>svg').css('fill','#fff');
+				$('.heart').css('fill','#1EFFBC');
 				$('.popup-menu').css('background-image','none').css('background-color','rgba(23,20,32,0.9)');
+				$('.f-open').css('stroke','#1effbb');
 			}
 			else
 			{
 				$('.fmenu-title>a').animate({'color':'#150098'},500);
-				$('.social>svg').css('fill','#150098');
+				$('.heart').css('fill','#150098');
+				$('.page-name, .page-number').css('color','#CCCAE3');
 				$('.popup-menu').css('background-image','none').css('background-color','rgba(23,20,32,0.9)');
+				$('.f-open').css('stroke','#150097');
 
+
+			}
+			if (index == 7) {
+				$('.page-name, .page-number').css('color','#1EFFBC');
 			}
 		},
 		onLeave: function(index,nextIndex,direction){
@@ -31,31 +39,35 @@ $(document).ready(function() {
 				}
 			}
 		});	//	Инициализируем fullpage.js		 
-	$('#article-link').magnificPopup({
+	$('#article-link').magnificPopup();
+	 //Тестовая функция	
+	/*$('#article-link').magnificPopup({
 		items: {
 			src: '<div class="test-popup">Test inline element</div>',
 			type: 'inline'
 		},
-	}); //Тестовая функция		
+	}); //Тестовая функция		*/
 }); 
 
 
 function showmenu(time){
-	$('.popup-menu').show().animate({'right':'0', 'background-position':'0'},time);
-	$('.fmenu-burger>img').removeClass('f-open').addClass('f-close');
+	$('.popup-menu').show().animate({'right':'0', 'background-position':'0'},time,function(){
+	$('.f-open').fadeOut('200',function(){$('.f-close').fadeIn();});
 	$('.content, .fmenu-title, .social').css('filter','blur(5px)');
+	});
 }
 
 function hidemenu(time){
-	$('.popup-menu').animate({'right':'-100vw', 'background-position':'-100vw'},time).hide();
-	$('.fmenu-burger>img').removeClass('f-close').addClass('f-open');
 	$('.content, .fmenu-title, .social').css('filter','none');
+	$('.popup-menu').animate({'right':'-100vw', 'background-position':'-100vw'},time,function(){
+	$('.f-close').fadeOut('200',function(){$('.f-open').fadeIn();});
+	$('.popup-menu').hide();
+	});
 }			
 
 
 $(document).on('click','.f-open', function (e){
 	showmenu(1000);
-
 }); // Показываем меню по нажатию на бургер
 
 $(document).on('click','.f-close, .left-side, .menuitem', function (e){
@@ -63,9 +75,9 @@ $(document).on('click','.f-close, .left-side, .menuitem', function (e){
 }); // Убираем меню при нажатии на крестик, левое поле или по выбору пункта меню
 
 $(document).ready(function(){
-	
-
+	$('.item .fname').fadeOut(500);
 	var owl = $('.team-carousel');
+	var owl2 = $('.form-carousel');
 	$('.team-carousel').owlCarousel({
 		items: 3,
 		center: true,
@@ -78,7 +90,7 @@ $(document).ready(function(){
 	$('.form-carousel').owlCarousel({
 		items: 1,
 		loop: false,
-		nav: true,
+		nav: false,
 	});
 	
 
@@ -89,6 +101,10 @@ $(document).ready(function(){
 
 	$(document).on('click','.gallery-right', function(e){
 		owl.trigger('next.owl.carousel');
+	}); // Обработка нажатия правой стрелки
+
+	$(document).on('click','.form-right', function(e){
+		owl2.trigger('next.owl.carousel');
 	}); // Обработка нажатия правой стрелки
 
 	$(document).on('click','#next', function(e){
@@ -111,12 +127,29 @@ $(document).ready(function(){
 		var count = event.page.index+1;
 		$('.gallery-counter').html('0'+count);
 		setTimeout(function(){
-
 			$('.center.active').css('filter','sepia(1)');
 			$('.center.active .fname').fadeIn(500);
-
 		}, 100); // При перелистывании убираем эффекты, прячем имя. Добавляем их новому активному слайду
-	})
+	});
+
+	owl2.on('changed.owl.carousel',function(event){
+		var count = event.page.index;
+		if (count == 2) {
+			$('.form-next-btn').fadeOut('200',function(){$('#send').fadeIn()});
+			
+		}
+	});
+
+	  $('.heart').on('mouseenter', function(){
+    $('.circle-canvas').fadeIn();
+    setTimeout(function(){$('.social-fb').fadeIn()},400);
+    setTimeout(function(){$('.social-vk').fadeIn()},600);
+  });
+  $('.circle-canvas').on('mouseleave', function(){
+    $('.social-vk').fadeOut();
+    setTimeout(function(){$('.social-fb').fadeOut()},400);
+    setTimeout(function(){$('.circle-canvas').fadeOut()},600); 
+  });
 });
 
 

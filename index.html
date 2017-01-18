@@ -15,7 +15,17 @@
 			<a href="/">TextForce</a> 
 		</div>
 		<div class="fmenu-burger">
-			<img class="f-open" src="img/burger_blue.png" alt="menu">
+			<!-- <img class="f-open" src="img/burger_blue.png" alt="menu"> -->
+			<svg class="f-open" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" >
+				<path d="M19,4c0,1.933-1.471,3.5-3.285,3.5H4.285C2.47,7.5,1,5.933,1,4l0,0
+					c0-1.933,1.47-3.5,3.285-3.5h11.43C17.529,0.5,19,2.067,19,4L19,4z"/>
+				<path d="M14,14c0,1.933-1.566,3.5-3.5,3.5h-6C2.567,17.5,1,15.933,1,14l0,0
+				c0-1.934,1.567-3.5,3.5-3.5h6C12.434,10.5,14,12.066,14,14L14,14z"/>
+			</svg>
+			<svg class="f-close" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" >
+				<line fill="none" stroke="#1effbb" x1="0" y1="0" x2="20" y2="20"/>
+				<line fill="none" stroke="#1effbb" x1="20" y1="0" x2="0" y2="20"/>
+			</svg>
 		</div>
 	</div>
 	<!-- END FMENU -->
@@ -39,30 +49,35 @@
 	</div>
 	<!-- END popup-menu -->
 	<!-- BEGIN SOCIAL -->
-	<div class="social">
-		<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		width="29.149px" height="28.105px" viewBox="0 0 29.149 28.105" enable-background="new 0 0 29.149 28.105" xml:space="preserve">
+	<div class="social-block">
+  <div class="heart">
+    <svg 
+		width="29.149px" height="28.105px" viewBox="0 0 29.149 28.105" 
 		<g>
 			<defs>
-				<rect id="SVGID_1_" width="29.149" height="28.105"/>
+				<rect id="SVGID_1_" width="30" height="30"/>
 			</defs>
 			<clipPath id="SVGID_2_">
 				<use xlink:href="#SVGID_1_"  overflow="visible"/>
 			</clipPath>
 			<path clip-path="url(#SVGID_2_)" d="M14.574,28.105l-0.503-0.296c-0.307-0.181-7.573-4.506-11.719-11.06
 			c-2.203-3.479-2.888-7.152-1.93-10.343c0.785-2.611,2.605-4.676,5.126-5.81C6.428,0.201,7.336,0,8.247,0
-			c2.917,0,5.181,2.028,6.327,3.321C15.721,2.028,17.984,0,20.902,0c0.911,0,1.818,0.2,2.698,0.597
-			c2.521,1.134,4.342,3.198,5.127,5.81c0.958,3.189,0.271,6.862-1.931,10.345c-4.146,6.552-11.412,10.877-11.719,11.058
+c2.917,0,5.181,2.028,6.327,3.321C15.721,2.028,17.984,0,20.902,0c0.911,0,1.818,0.2,2.698,0.597
+c2.521,1.134,4.342,3.198,5.127,5.81c0.958,3.189,0.271,6.862-1.931,10.345c-4.146,6.552-11.412,10.877-11.719,11.058
 			L14.574,28.105z M8.246,1.985c-0.629,0-1.262,0.143-1.885,0.423c-1.988,0.895-3.423,2.519-4.04,4.571
 			c-0.79,2.63-0.184,5.724,1.707,8.711c3.287,5.194,8.852,9.01,10.546,10.096c1.694-1.088,7.265-4.911,10.547-10.096
 			c1.89-2.987,2.497-6.081,1.706-8.711c-0.617-2.053-2.052-3.677-4.041-4.571c-0.623-0.28-1.256-0.423-1.884-0.423
 			c-3.145,0-5.479,3.448-5.502,3.483l-0.826,1.238l-0.825-1.238C13.726,5.435,11.37,1.985,8.246,1.985"/>
 		</g>
 	</svg>
+  </div>
+<div class="circle-canvas"> 
+  <svg>
+    <circle class="social-circle" />
+  </svg>
+  <div class="social-fb"><i class="fa fa-facebook socbtn"></i></div>
+  <div class="social-vk"><i class="fa fa-vk socbtn"></i></div>
 </div>
-<div class="social-circle">
-	<i class="fa fa-facebook socbtn"></i>
-	<i class="fa fa-vk socbtn"></i>
 </div>
 <!-- END SOCIAL -->
 <!-- BEGIN sidebar -->
@@ -200,14 +215,36 @@
 				<div class="item"><input id="umail" type="email" name="user-email" placeholder="Укажите Ваш адрес электронной почты"></div>
 				<div class="item"><input id="utel" type="tel" name="user-phone" placeholder="Укажите Ваш контактный телефон"></div>
 			</div>
-			<input id="next" class="form-next-btn" type="button" value="-->">
+			<div class="form-next-btn">
+				<svg x="22px" y="17px"
+width="62.99px" height="21.98px" viewBox="0 0 62.99 21.98" enable-background="new 0 0 62.99 21.98" xml:space="preserve" class="form-right" style="cursor: pointer">
+	<g>
+		<path stroke="#1EFFBB" stroke-miterlimit="10" d="M52.726,0.522c0.299,0,0.609,0.135,0.831,0.36l9.596,9.806
+		c0.217,0.223,0.348,0.534,0.348,0.834s-0.131,0.611-0.349,0.833l-9.595,9.805c-0.441,0.452-1.221,0.452-1.662,0l-1.029-1.052
+		c-0.225-0.229-0.349-0.525-0.349-0.834c0-0.298,0.13-0.609,0.349-0.833l7.75-7.919l-7.75-7.921
+		c-0.219-0.223-0.349-0.534-0.349-0.833s0.13-0.611,0.349-0.834l1.029-1.052C52.116,0.657,52.427,0.522,52.726,0.522z"/>
+		<rect x="0.51" y="9.522" stroke="#1EFFBB" stroke-miterlimit="10" width="59" height="4"/>
+	</g>
+</svg>
+			</div>
 			<input id="send" class="form-send-btn" type="submit" value="Отправить >>">
 		</form>
 	</div>			
 </section>
 </div>
 <!-- END FULLPAGE -->
-<div id="#article" class="mfp-hide">test mfp</div>
+<!--Модальные окна-->
+<div id="article" class="white-popup mfp-hide modal">
+	<h2>Новости</h2>
+	<p>Новости бывают хорошими и плохими - то есть написанными либо хорошо, либо плохо.</p>
+	<p>Мы пишем только хорошие новости — о Вашей компании, о Вас, о рынке, на котором Вы работаете, о каких-то вещах, которые интересны публике, но маловаты для больших жанров.</p>
+	<h3>Зачем нужны новости на сайте?</h3>
+	<p>Это источник информации о Вашей компании, который с одной стороны добавляет трафик, а с другой – демонстрирует привлекательные для клиентов и контрагентов аспекты Вашего бизнеса.</p>
+	<p>Регулярное обновление новостной ленты дает сигнал поисковым системам о том, что Ваш сайт развивается.</p>
+	<p>Наконец, это прекрасная возможность держать в курсе происходящих в компании событий Ваших друзей, партнеров и журналистов – известить о выпуске интересной новинке, сезонном спецпредложении или сообщить о победе в отраслевом конкурсе.</p>
+	<p>Подробно о новостях для Вашего сайта читайте <a href="#">в нашем блоге</a>.</p>
+</div>
+<!--Подключаем библиотеки-->
 <script src="js/libs.min.js"></script>
 <script src="js/common.js"></script>
 

@@ -45,7 +45,12 @@
       color: #150098; }
 
 .f-open, .f-close {
-  cursor: pointer; }
+  cursor: pointer;
+  stroke: #1efffb;
+  fill: none; }
+
+.f-close {
+  display: none; }
 
 .dl-block {
   position: absolute;
@@ -265,17 +270,6 @@ section#slide7 {
     height: 1.5625vw;
     fill: #150098; }
 
-.social-circle {
-  width: 80px;
-  height: 80px;
-  -webkit-border-radius: 40px;
-          border-radius: 40px;
-  border: 5px solid rgba(21, 0, 151, 0.2);
-  position: fixed;
-  z-index: 7000;
-  left: 6.25vw;
-  top: 83.33333vh; }
-
 .socbtn {
   color: #fff;
   background-color: #150097;
@@ -421,3 +415,120 @@ input#send, input#next {
   -webkit-border-radius: 28px;
           border-radius: 28px;
   background-clip: padding-box; }
+
+input#send {
+  width: 215px;
+  line-height: 60px;
+  display: none;
+  margin-top: 5.55556vh; }
+
+.form-next-btn {
+  background: rgba(29, 255, 187, 0.1);
+  width: 107px;
+  height: 56px;
+  -webkit-border-radius: 28px;
+          border-radius: 28px;
+  margin-top: 5.55556vh; }
+
+.form-right {
+  fill: #1EFFBB;
+  margin-left: 22px;
+  margin-top: 17px; }
+
+.social-sphere {
+  cx: 40px;
+  cy: 40px;
+  r: 40px;
+  fill: none;
+  stroke: rgba(21, 0, 151, 0.2);
+  stroke-width: 5px; }
+
+.social-round svg {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  overflow: visible; }
+
+.social-block {
+  position: fixed;
+  z-index: 7000;
+  left: 1.19048vw;
+  top: 61.11111vh;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto; }
+
+.heart {
+  position: absolute;
+  left: -webkit-calc(50% - 13px);
+  left: calc(50% - 13px);
+  top: -webkit-calc(50% - 13px);
+  top: calc(50% - 13px);
+  z-index: 1000; }
+
+.circle-canvas {
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  overflow: visible;
+  display: none;
+  width: 120px;
+  height: 120px;
+  z-index: 5000; }
+
+.circle-canvas svg {
+  overflow: visible; }
+
+.social-circle {
+  cx: 60px;
+  cy: 60px;
+  r: 40px;
+  fill: none;
+  stroke: rgba(21, 0, 151, 0.2);
+  stroke-width: 5px; }
+
+.social-fb, .social-vk {
+  color: #fff;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #150097;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  display: none; }
+
+.social-fb {
+  top: 0px;
+  left: 40px; }
+
+.social-vk {
+  top: 40px;
+  left: 80px; }
+
+.socbtn {
+  background: none;
+  padding: 0;
+  margin: 0; }
+
+.modal {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto; }
+  .modal h2 {
+    color: #150098;
+    font-family: "Muller-bold";
+    font-size: 2.5vw; }
+  .modal h3 {
+    color: #150098;
+    font-family: "Muller-bold";
+    font-size: 1.5625vw; }
+  .modal p {
+    margin-top: 3.125vw;
+    color: #191919;
+    font-family: "Muller-light";
+    font-size: 1.5625vw; }
