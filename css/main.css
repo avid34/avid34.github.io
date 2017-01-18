@@ -83,7 +83,7 @@ section {
 section#slide1 {
   position: relative;
   background: #150098 url("/img/typewriter.jpg");
-  background-size: 100%;
+  background-size: cover;
   font-size: 2.03125vw;
   font-family: "Muller-regular";
   color: #fff;
@@ -361,7 +361,8 @@ section#slide7 {
     margin: 0;
     padding: 0; }
     #slide4 .content h2 {
-      padding-left: 19.53125%; }
+      padding-left: 19.53125%;
+      float: left; }
 
 .item img {
   -webkit-filter: grayscale(1);
@@ -379,5 +380,44 @@ section#slide7 {
     letter-spacing: .3em; }
 
 .gallery-nav {
-  left: 50%;
+  float: right;
+  padding-right: 45%;
   z-index: 2000; }
+
+.gallery-counter {
+  font-family: "Muller-bold";
+  font-size: 22px;
+  background-color: #1dffbb;
+  color: #29159f;
+  width: 55px;
+  height: 55px;
+  -webkit-border-radius: 27px;
+          border-radius: 27px;
+  display: inline-block;
+  text-align: center;
+  line-height: 57px; }
+
+.gallery-right, .gallery-left {
+  display: inline-block; }
+
+form.callback-form input {
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-family: "Muller-light";
+  width: 54.6875vw;
+  outline: none;
+  color: #ebebeb;
+  border-bottom: 2px solid rgba(0, 249, 189, 0.1);
+  margin-top: 11.11111vh;
+  line-height: 11.11111vh; }
+
+input#send, input#next {
+  border: none;
+  cursor: pointer;
+  background: rgba(29, 255, 187, 0.1);
+  width: 107px;
+  height: 56px;
+  -webkit-border-radius: 28px;
+          border-radius: 28px;
+  background-clip: padding-box; }

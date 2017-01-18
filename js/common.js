@@ -6,12 +6,10 @@ $(document).ready(function() {
 		navigation: true,
 		navigationTooltips: ['TextForce','Система','Услуги','Команда','Мы не','Блог','Напишите нам'],
 		afterLoad: function(link,index){
-
 			if (index == 1 || index == 7) {
 				$('.fmenu-title>a').animate({'color':'#fff'},500);
 				$('.social>svg').css('fill','#fff');
 				$('.popup-menu').css('background-image','none').css('background-color','rgba(23,20,32,0.9)');
-
 			}
 			else
 			{
@@ -20,7 +18,6 @@ $(document).ready(function() {
 				$('.popup-menu').css('background-image','none').css('background-color','rgba(23,20,32,0.9)');
 
 			}
-
 		},
 		onLeave: function(index,nextIndex,direction){
 			if (nextIndex == 1){
@@ -33,15 +30,14 @@ $(document).ready(function() {
 					$('.sidebar').fadeIn(200);
 				}
 			}
-		});				
+		});	//	Инициализируем fullpage.js		 
 	$('#article-link').magnificPopup({
 		items: {
 			src: '<div class="test-popup">Test inline element</div>',
 			type: 'inline'
 		},
-
-	});		
-});
+	}); //Тестовая функция		
+}); 
 
 
 function showmenu(time){
@@ -60,32 +56,45 @@ function hidemenu(time){
 $(document).on('click','.f-open', function (e){
 	showmenu(1000);
 
-});
+}); // Показываем меню по нажатию на бургер
 
 $(document).on('click','.f-close, .left-side, .menuitem', function (e){
 	hidemenu(1000);
-}); 
+}); // Убираем меню при нажатии на крестик, левое поле или по выбору пункта меню
 
 $(document).ready(function(){
-	var owl = $('.owl-carousel');
-	$('.owl-carousel').owlCarousel({
+	
+
+	var owl = $('.team-carousel');
+	$('.team-carousel').owlCarousel({
 		items: 3,
 		center: true,
 		loop: true,
 		nav: false,
 		margin: 10,
 		startPosition: 0,
+	}); // Инициализируем карусель
+
+	$('.form-carousel').owlCarousel({
+		items: 1,
+		loop: false,
+		nav: true,
 	});
+	
 
 	$(document).on('click','.gallery-left', function(e){
 		owl.trigger('prev.owl.carousel');
-		$('.gallery-counter').html(e.page.index);
-	});
+		
+	}); // Обработка нажатия левой стрелки
 
 	$(document).on('click','.gallery-right', function(e){
 		owl.trigger('next.owl.carousel');
-	});
+	}); // Обработка нажатия правой стрелки
 
+	$(document).on('click','#next', function(e){
+		$('#uname').slideUp();
+		$('#umail').slideDown();
+	});
 
 	$(document.documentElement).keyup(function(event){
 		if (event.keyCode == 37) {
@@ -93,23 +102,21 @@ $(document).ready(function(){
 		} else if (event.keyCode == 39) {
 			owl.trigger('next.owl.carousel');
 		}
-	});
+	}); // Подключаем управление стрелками клавиатуры
 
 	$('.center.active').css('filter','sepia(1)');
 	owl.on('changed.owl.carousel', function(event) {
 		$('.active').css('filter','sepia(0)');
 		$('.owl-item .fname').fadeOut(500);
-
+		var count = event.page.index+1;
+		$('.gallery-counter').html('0'+count);
 		setTimeout(function(){
 
 			$('.center.active').css('filter','sepia(1)');
 			$('.center.active .fname').fadeIn(500);
 
-		}, 100);
-
+		}, 100); // При перелистывании убираем эффекты, прячем имя. Добавляем их новому активному слайду
 	})
-
-
 });
 
 
