@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//Инициализируем fullpage.js
+		//Инициализируем fullpage.js
 	$('#fullpage').fullpage({
 		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
 		sectionsColor: ['#150098', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#171420'],
@@ -26,6 +26,10 @@ $(document).ready(function() {
 			if (index == 7) {
 				$('.page-name, .page-number').css('color','#1EFFBC');
 			}
+			if (index == 3) {
+				
+
+			}
 		},
 		onLeave: function(index,nextIndex,direction){
 			if (nextIndex == 1){
@@ -36,17 +40,17 @@ $(document).ready(function() {
 					$('.page-number').html(nextIndex+'/7');
 					$('.page-name').html(pagename[nextIndex-1]);
 					$('.sidebar').fadeIn(200);
+					
 				}
 			}
 		});	//	Инициализируем fullpage.js		 
-	$('#article-link').magnificPopup();
-	 //Тестовая функция	
-	/*$('#article-link').magnificPopup({
-		items: {
-			src: '<div class="test-popup">Test inline element</div>',
-			type: 'inline'
-		},
-	}); //Тестовая функция		*/
+	
+	$('#article-link, #res-link, #sys-link, #exp-link').magnificPopup({
+		
+
+	}); //Инициализируем всплывающие окна
+
+	
 }); 
 
 
@@ -75,6 +79,8 @@ $(document).on('click','.f-close, .left-side, .menuitem', function (e){
 }); // Убираем меню при нажатии на крестик, левое поле или по выбору пункта меню
 
 $(document).ready(function(){
+	
+
 	$('.item .fname').fadeOut(500);
 	var owl = $('.team-carousel');
 	var owl2 = $('.form-carousel');
@@ -142,6 +148,7 @@ $(document).ready(function(){
 
 	  $('.heart').on('mouseenter', function(){
     $('.circle-canvas').fadeIn();
+
     setTimeout(function(){$('.social-fb').fadeIn()},400);
     setTimeout(function(){$('.social-vk').fadeIn()},600);
   });

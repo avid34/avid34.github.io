@@ -24,7 +24,8 @@
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  outline: 0; }
 
 .fmenu {
   position: fixed;
@@ -209,10 +210,20 @@ section#slide1 {
     list-style: none;
     font-family: "Muller-bold";
     font-size: 0.9375vw;
-    margin-right: 7.8125%;
-    border-bottom: 2px solid;
-    padding: 0.78125vw;
-    letter-spacing: 0.15625vw; }
+    margin-right: 7.8125%; }
+    #slide2 .content ul li a {
+      text-decoration: none;
+      color: #150098;
+      border-bottom: 2px solid;
+      padding: 0.78125vw;
+      letter-spacing: 0.15625vw;
+      -webkit-transition: 1s;
+      transition: 1s; }
+    #slide2 .content ul li :hover {
+      background-color: #00f9bd;
+      border-bottom: none;
+      -webkit-border-radius: 5px;
+              border-radius: 5px; }
 
 .services .service-list {
   list-style: none; }
@@ -518,7 +529,9 @@ input#send {
   background: #FFF;
   padding: 20px;
   max-width: 600px;
-  margin: 20px auto; }
+  margin: 20px auto;
+  max-height: 90vh;
+  overflow: auto; }
   .modal h2 {
     color: #150098;
     font-family: "Muller-bold";
