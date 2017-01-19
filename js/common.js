@@ -7,6 +7,7 @@ $(document).ready(function() {
 	
 if (!isMobile){	
 	$('#fullpage').fullpage({
+			responsiveWidth: 641,
 			anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
 			sectionsColor: ['#150098', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#171420'],
 			menu: '#menu',
@@ -54,6 +55,7 @@ if (!isMobile){
 }
 else {
 	$('#fullpage').fullpage({
+			responsiveWidth: 641,
 			anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
 			sectionsColor: ['#150098', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#171420'],
 			menu: '#menu',
