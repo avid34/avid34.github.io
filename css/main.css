@@ -545,3 +545,43 @@ input#send {
     color: #191919;
     font-family: "Muller-light";
     font-size: 1.5625vw; }
+
+.desk-hide {
+  display: none; }
+
+@media screen and (max-width: 641px) {
+  .mob-hide {
+    display: none; }
+  .desk-hide {
+    display: block; }
+  .fmenu .fmenu-title a {
+    font-size: 4.6875vw; }
+  .services .service-list .service-list-item {
+    width: 100%; }
+    .services .service-list .service-list-item span {
+      font-size: 3.125vw; }
+    .services .service-list .service-list-item .service-list-image {
+      width: 23.4375vw;
+      height: auto; }
+  .content {
+    padding-left: 0;
+    margin-left: 0; }
+  .mob-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #00fbbd;
+    text-align: center; }
+    .mob-header h2 {
+      color: #13009a;
+      font-size: 4.6875vw;
+      text-align: center;
+      line-height: 29.6875vw; }
+  #slide4 .content h2 {
+    padding-left: 0;
+    float: none; }
+  .gallery-nav {
+    float: none;
+    position: absolute;
+    top: 31.25vw;
+    left: 10vw; } }
