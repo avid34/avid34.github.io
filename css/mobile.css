@@ -179,13 +179,14 @@ section {
 section#slide1 {
   height: 100vh;
   position: relative;
-  background: #150098 url("/img/typewriter.jpg");
+  //background: #150098 url("/img/typewriter.jpg");
   background-size: cover;
   background-position: center;
   font-size: 2.03125vw;
   font-family: "Muller-regular";
   color: #fff;
-  background-blend-mode: multiply; }
+  //background-blend-mode: multiply; 
+}
 
 #slide1 .content .s1 {
   font-family: "Muller-regular";
