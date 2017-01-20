@@ -184,7 +184,8 @@ section#slide1 {
   background-position: center;
   font-size: 2.03125vw;
   font-family: "Muller-regular";
-  color: #fff; }
+  color: #fff;
+  background-blend-mode: multiply; }
 
 #slide1 .content .s1 {
   font-family: "Muller-regular";
