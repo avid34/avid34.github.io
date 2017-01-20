@@ -376,7 +376,8 @@ section#slide1 {
     text-align: center;
     padding-bottom: 10px;
     padding-top: 10px;
-    margin-top: 20px; }
+    margin-top: 20px;
+    vertical-align: top; }
     .services .service-list .service-list-item hr {
       border: none;
       color: #00fabe;

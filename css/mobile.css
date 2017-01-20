@@ -40,14 +40,14 @@
     line-height: 60px;
     position: fixed;
     left: 8.03571vw;
-    top: 5.65476vw; }
+    top: 5px; }
     .fmenu .tf-logo svg {
       fill: none;
       stroke: #000; }
   .fmenu .fmenu-burger {
     position: fixed;
     right: 9.76563vw;
-    top: 5.65476vw;
+    top: 5px;
     z-index: 9999;
     border: 1px solid #000;
     -webkit-border-radius: 25px;
@@ -77,7 +77,7 @@
 .mobile-menu {
   padding-top: 0;
   margin-top: 0;
-  height: 21.875vw;
+  height: 60px;
   width: 100%;
   background-color: #fff;
   z-index: 9999;
