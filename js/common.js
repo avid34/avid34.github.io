@@ -34,27 +34,31 @@ if (!isMobile){
 				if (index == 7) {
 					$('.page-name, .page-number').css('color','#1EFFBC');
 				}
-				if (index == 3) {
+				if (index == 1) {
+					$('.dl-block').fadeIn(200);
 
 
 				}
 			},
 			onLeave: function(index,nextIndex,direction){
 				if (nextIndex == 1){
-					$('.sidebar').hide();}
+					$('.sidebar').hide(200);
+					}
 					else
 					{
 						var pagename = ['T e x t F o r c e','С И С Т Е М А','У С Л У Г И','К О М А Н Д А','М Ы<br><br>Н Е','Б Л О Г','Н А П И Ш И Т Е<br><br>Н А М'];
 						$('.page-number').html(nextIndex+'/7');
 						$('.page-name').html(pagename[nextIndex-1]);
-						$('.sidebar').fadeIn(200);
+						$('.dl-block').fadeOut(200,function(){$('.sidebar').fadeIn(200);});
+						
+
 
 					}
 				}
 		});
 }
 else {
-	$('#fullpage').fullpage({
+	/*$('#fullpage').fullpage({
 			responsiveWidth: 641,
 			anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
 			sectionsColor: ['#150098', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#171420'],
@@ -91,21 +95,25 @@ else {
 
 					
 				}
-		});
+		});*/
 }	//	Инициализируем fullpage.js		 
 
 if (!isMobile) {
+	$('.item .fname').fadeOut(500);
 	$('#article-link, #res-link, #sys-link, #exp-link').magnificPopup({}); //Инициализируем всплывающие окна
 }
 else
 {
+	
 	$('#article-link').magnificPopup({});
 	$('#result, #sys, #exp').removeClass('modal mfp-hide').addClass('mob-slide2');
 }
-	$('.item .fname').fadeOut(500);
+	
 	var owl = $('.team-carousel');
 	var owl2 = $('.form-carousel');
 if(!isMobile) {
+	$('.owl-item .fname').fadeOut(500);
+	$('.center.active .fname').fadeIn(500);
 	$('.team-carousel').owlCarousel({
 			items: 3,
 			center: true,
@@ -125,6 +133,7 @@ else {
 			startPosition: 0,
 	}); // Инициализируем карусель
 }
+
 
 	$('.form-carousel').owlCarousel({
 			items: 1,
@@ -159,13 +168,12 @@ else {
 	owl.on('changed.owl.carousel', function(event) {
 		
 		$('.active').css('filter','sepia(0)');
-		
-		$('.owl-item .fname').fadeOut(500);
+		if (!isMobile) {$('.owl-item .fname').fadeOut(500);}
 		var count = event.page.index+1;
 			$('.gallery-counter').html('0'+count);
 		setTimeout(function(){
 			$('.center.active').css('filter','sepia(1)');
-			$('.center.active .fname').fadeIn(500);
+		if (!isMobile){$('.center.active .fname').fadeIn(500);}
 		}, 100); // При перелистывании убираем эффекты, прячем имя. Добавляем их новому активному слайду
 		});
 
@@ -176,7 +184,7 @@ else {
 		}
 	});
 
-	$('.heart').on('mouseenter', function(){
+	$('.heart').on('mouseover', function(){
 		$('.circle-canvas').fadeIn();
 		setTimeout(function(){$('.social-fb').fadeIn()},400);
 		setTimeout(function(){$('.social-vk').fadeIn()},600);
