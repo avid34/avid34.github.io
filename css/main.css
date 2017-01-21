@@ -135,7 +135,8 @@
   left: 6.25vw;
   text-align: center;
   width: 125px;
-  z-index: 9999; }
+  z-index: 9999;
+  cursor: pointer; }
   .dl-block .dl-text {
     font-family: "Muller-bold";
     font-size: 14px;
