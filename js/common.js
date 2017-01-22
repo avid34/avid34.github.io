@@ -5,6 +5,7 @@ var vcounter = 1;
 $(document).ready(function() {
 
 	//Инициализируем fullpage.js
+	if(!isMobile){
 	$('#fullpage').fullpage({
 		responsiveWidth: 641,
 		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
@@ -47,7 +48,7 @@ $(document).ready(function() {
 				$('.dl-block').fadeOut(200,function(){$('.sidebar').fadeIn(200);});
 			}
 		}
-	});
+	});}
 
 if (!isMobile) {
 	$('#article-link, #res-link, #sys-link, #exp-link').magnificPopup({}); //Инициализируем всплывающие окна
@@ -213,14 +214,32 @@ function hidemenu(time){
 		$('.f-close').fadeOut('200',function(){$('.f-open').fadeIn();});
 		$('.popup-menu').hide();
 	});
-}			
+}
+
+function showmobmenu(time){
+	$('.popup-menu').show().animate({'top':'0', 'background-position':'0'},time,function(){
+		$('.f-open').fadeOut('200',function(){$('.f-close').fadeIn();});
+		$('.content, .fmenu-title, .social').css('filter','blur(5px)');
+	});
+}
+function hidemobmenu(time){
+	$('.content, .fmenu-title, .social').css('filter','none');
+	$('.popup-menu').animate({'top':'-100vh', 'background-position':'-100vw'},time,function(){
+		$('.f-close').fadeOut('200',function(){$('.f-open').fadeIn();});
+		$('.popup-menu').hide();
+	});
+}
 
 $(document).on('click','.f-open', function (e){
-	showmenu(1000);
+	if (!isMobile) {showmenu(1000);}
+	else
+		{showmobmenu(1000);}
 }); // Показываем меню по нажатию на бургер
 
 $(document).on('click','.f-close, .left-side, .menuitem', function (e){
-	hidemenu(1000);
+	if (!isMobile) {hidemenu(1000);}
+	else
+		{hidemobmenu(1000);}
 }); // Убираем меню при нажатии на крестик, левое поле или по выбору пункта меню
 
 

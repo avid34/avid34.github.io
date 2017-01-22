@@ -85,11 +85,12 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
 
 .popup-menu {
-  position: absolute;
+  position: fixed;
   height: 100vh;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   width: 100vw;
+  top: -100vh;
   background: #171420;
   background-size: 100%;
   background-repeat: repeat-y;
@@ -98,13 +99,11 @@
   display: none; }
   .popup-menu .left-side, .popup-menu .right-side {
     position: absolute;
-    width: 50vw;
-    height: 100vh; }
+    width: 100vw; }
   .popup-menu .left-side {
-    right: 50vw;
     color: #1effbc;
     font-family: "Muller-bold";
-    font-size: 1.875vw; }
+    font-size: 3.75vw; }
     .popup-menu .left-side p {
       margin-top: 69.44444vh;
       margin-left: 10.15625vw;
@@ -116,11 +115,10 @@
     .popup-menu .left-side .udl {
       border-bottom: 2px solid; }
   .popup-menu .right-side {
-    right: 0;
+    top: 0;
     background-color: #191623;
     padding-top: 21.875vw;
-    z-index: 8001;
-    height: 78.125vh; }
+    z-index: 8001; }
     .popup-menu .right-side ul {
       margin-left: 0;
       list-style: none; }
@@ -129,7 +127,7 @@
         padding-left: 5.46875vw;
         line-height: 10vh;
         font-family: "Muller-regular";
-        font-size: 1.64063vw;
+        font-size: 3.28125vw;
         letter-spacing: 0.3em;
         text-transform: uppercase; }
       .popup-menu .right-side ul li:hover {
@@ -197,27 +195,37 @@ section#slide1 {
 
 .content {
   color: #150098;
-  width: 58.59375vw; }
+  width: 58.59375vw;
+  position: relative; }
 
-#slide2 .content {
-  padding-top: 21.875vw; }
-  #slide2 .content h2 {
-    color: #13009a;
-    font-family: "Muller-bold";
-    font-size: 25px;
-    text-align: center;
-    margin: 15px; }
-  #slide2 .content p {
-    color: #13009a;
-    font-family: "Proxima-light";
-    font-size: 15px;
-    line-height: 2em; }
+#slide2 {
+  padding-left: 0; }
+  #slide2 .content {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 21.875vw; }
+    #slide2 .content h2 {
+      color: #13009a;
+      font-family: "Muller-bold";
+      font-size: 25px;
+      text-align: center;
+      margin: 15px; }
+    #slide2 .content p {
+      color: #13009a;
+      font-family: "Proxima-light";
+      font-size: 15px;
+      line-height: 2em; }
 
 #slide3 {
+  padding-left: 0;
   color: #13009a;
   font-family: "Muller-bold";
   font-size: 20px;
   margin-top: 2em; }
+  #slide3 .content {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1em 0; }
 
 .services .service-list {
   list-style: none; }
@@ -308,7 +316,7 @@ section#slide1 {
   display: inline-block;
   text-align: center; }
 
-.gallery-counter, .vertical-counter {
+.gallery-counter, .vertical-counter, .blog-counter {
   font-family: "Muller-bold";
   font-size: 22px;
   background-color: #1dffbb;
@@ -321,7 +329,7 @@ section#slide1 {
   text-align: center;
   line-height: 57px; }
 
-.vertical-counter {
+.vertical-counter, .blog-counter {
   margin: 10px 0; }
 
 .gallery-counter {
@@ -330,46 +338,132 @@ section#slide1 {
 .gallery-right, .gallery-left {
   display: inline-block; }
 
-#slide5 .content {
-  position: relative;
+.blog-left, .blog-right {
+  -webkit-transform: rotateZ(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotateZ(90deg); }
+
+section#slide5 {
+  padding-left: 0;
+  padding-top: 1em; }
+  section#slide5 .slide5-head {
+    width: 100%;
+    text-align: center;
+    color: #13009a;
+    font-family: "Muller-bold";
+    font-size: 30px;
+    line-height: 21.875vw;
+    background-color: #00f9bd; }
+  section#slide5 .content {
+    position: relative;
+    min-height: 250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    section#slide5 .content ul {
+      margin-left: 0; }
+      section#slide5 .content ul li {
+        font-family: "Muller-bold";
+        font-size: 16px;
+        list-style: none;
+        margin-top: 30px; }
+    section#slide5 .content .top-fade, section#slide5 .content .bottom-fade {
+      position: absolute;
+      width: 100%;
+      height: 30%;
+      display: block;
+      z-index: 6000; }
+    section#slide5 .content .top-fade {
+      top: 0;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%); }
+    section#slide5 .content .bottom-fade {
+      top: 70%;
+      background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+      background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%); }
+    section#slide5 .content .vertical-nav {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      z-index: 9000;
+      color: #000;
+      cursor: pointer;
+      text-align: center;
+      margin-top: -97px; }
+
+section#slide6 {
+  padding-left: 0; }
+  section#slide6 .content {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em 0; }
+  section#slide6 .slide6-head {
+    width: 100%;
+    text-align: center;
+    color: #13009a;
+    font-family: "Muller-bold";
+    font-size: 30px;
+    line-height: 21.875vw;
+    background-color: #00f9bd; }
+  section#slide6 .blog-card {
+    width: 46.875vw;
+    height: auto;
+    overflow: hidden; }
+  section#slide6 .blog-date {
+    font-family: Proxima-light;
+    font-weight: bold;
+    font-size: 16px;
+    color: #969696;
+    margin-bottom: 1em; }
+  section#slide6 .blog-image img {
+    width: 46.875vw;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    height: auto; }
+  section#slide6 .show-more a {
+    text-decoration: none;
+    color: #1b00c5;
+    font-family: Proxima-light;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 1em 0; }
+  section#slide6 .show-more:hover {
+    text-decoration: underline; }
+  section#slide6 h2 {
+    font-size: 25px;
+    color: #150098;
+    font-family: Muller-bold;
+    margin: 20px 0; }
+  section#slide6 p {
+    margin-top: 5px;
+    color: #434343;
+    font-family: Proxima-light;
+    font-size: 16px; }
+
+.blog-nav {
   position: absolute;
   top: 50%;
-  right: 0;
-  z-index: 9999;
+  margin-top: -97px;
+  right: 9.76563vw;
+  z-index: 9000;
   color: #000;
   cursor: pointer;
-  text-align: center;
-  margin-top: -97px; }
-  #slide5 .content ul {
-    margin-left: 0; }
-    #slide5 .content ul li {
-      font-family: "Muller-bold";
-      font-size: 2.5vw;
-      list-style: none;
-      margin-top: 3.90625vw; }
-  #slide5 .content .top-fade, #slide5 .content .bottom-fade {
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    display: block;
-    z-index: 6000; }
-  #slide5 .content .top-fade {
-    top: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%); }
-  #slide5 .content .bottom-fade {
-    top: 70%;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
-    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%); }
+  text-align: center; }
 
 section#slide7 {
   background-color: #171420;
-  height: 100vh; }
+  height: 100vh;
+  padding-left: 0; }
   section#slide7 .content {
     color: #1effbc;
-    padding: 2em 0; }
+    padding: 2em 0;
+    width: 80%;
+    margin: 0 auto; }
     section#slide7 .content p {
       font-family: "Muller-bold";
       font-size: 6.25vw;
@@ -385,7 +479,7 @@ form.callback-form input {
   border: none;
   font-size: 24px;
   font-family: "Muller-light";
-  width: 54.6875vw;
+  width: 80vw;
   outline: none;
   color: #ebebeb;
   border-bottom: 2px solid rgba(0, 249, 189, 0.1);
