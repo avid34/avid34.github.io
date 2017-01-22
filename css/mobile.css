@@ -174,7 +174,7 @@
 
 section {
   width: 100vw;
-  padding-left: 19.53125%;
+  padding-left: 10.9375%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
@@ -272,7 +272,7 @@ section#slide1 {
   .gallery .mask-left, .gallery .mask-right {
     display: none; }
 
-.item img {
+.team-item img {
   -webkit-filter: grayscale(1);
           filter: grayscale(1); }
 
@@ -308,7 +308,7 @@ section#slide1 {
   display: inline-block;
   text-align: center; }
 
-.gallery-counter {
+.gallery-counter, .vertical-counter {
   font-family: "Muller-bold";
   font-size: 22px;
   background-color: #1dffbb;
@@ -321,16 +321,32 @@ section#slide1 {
   text-align: center;
   line-height: 57px; }
 
+.vertical-counter {
+  margin: 10px 0; }
+
+.gallery-counter {
+  margin: 0 10px; }
+
 .gallery-right, .gallery-left {
   display: inline-block; }
 
 #slide5 .content {
   position: relative;
-  padding: 2em 0; }
-  #slide5 .content p {
-    margin-bottom: 2em;
-    font-family: "Muller-bold";
-    font-size: 2.5vw; }
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 9999;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  margin-top: -97px; }
+  #slide5 .content ul {
+    margin-left: 0; }
+    #slide5 .content ul li {
+      font-family: "Muller-bold";
+      font-size: 2.5vw;
+      list-style: none;
+      margin-top: 3.90625vw; }
   #slide5 .content .top-fade, #slide5 .content .bottom-fade {
     position: absolute;
     width: 100%;

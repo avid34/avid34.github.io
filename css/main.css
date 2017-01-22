@@ -25,7 +25,11 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 0; }
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 .fmenu {
   position: fixed;
@@ -153,10 +157,10 @@
     color: #fff; }
   .dl-block .dl-icon {
     background-color: #1effbc;
-    width: 30px;
-    height: 30px;
-    -webkit-border-radius: 15px;
-            border-radius: 15px;
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
     margin: 0 auto; }
   .dl-block .dl-svg {
     width: 1.17188vw;
@@ -289,7 +293,9 @@
 
 section {
   width: 100vw;
-  padding-left: 19.53125%; }
+  padding-left: 19.53125%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 section#slide1 {
   position: relative;
@@ -404,9 +410,13 @@ section#slide1 {
 
 #slide5 .content {
   position: relative; }
-  #slide5 .content p {
-    font-family: "Muller-bold";
-    font-size: 2.5vw; }
+  #slide5 .content ul {
+    margin-left: 0; }
+    #slide5 .content ul li {
+      font-family: "Muller-bold";
+      font-size: 2.5vw;
+      list-style: none;
+      margin-top: 50px; }
   #slide5 .content .top-fade, #slide5 .content .bottom-fade {
     position: absolute;
     width: 100%;
@@ -423,6 +433,16 @@ section#slide1 {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
     background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
     background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%); }
+
+#slide5 .vertical-nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -97px;
+  right: 0;
+  z-index: 9999;
+  color: #000;
+  cursor: pointer;
+  text-align: center; }
 
 .gallery {
   margin-top: 7.63889vh;
@@ -453,7 +473,7 @@ section#slide1 {
       padding-left: 19.53125%;
       float: left; }
 
-.item img {
+.team-item img {
   -webkit-filter: grayscale(1);
           filter: grayscale(1); }
 
@@ -470,9 +490,10 @@ section#slide1 {
 .fname {
   width: 100%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 2em;
   font-family: "Muller-light";
-  font-size: 1.79687vw; }
+  font-size: 1.79687vw;
+  display: none; }
   .fname .lname {
     font-family: "Muller-bold";
     font-size: 1.79687vw;
@@ -483,7 +504,7 @@ section#slide1 {
   padding-right: 45%;
   z-index: 2000; }
 
-.gallery-counter {
+.gallery-counter, .vertical-counter, .blog-counter {
   font-family: "Muller-bold";
   font-size: 22px;
   background-color: #1dffbb;
@@ -494,10 +515,76 @@ section#slide1 {
           border-radius: 27px;
   display: inline-block;
   text-align: center;
-  line-height: 57px; }
+  line-height: 57px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.vertical-counter, .blog-counter {
+  margin: 10px 0; }
+
+.gallery-counter {
+  margin: 0 10px; }
 
 .gallery-right, .gallery-left {
   display: inline-block; }
+
+.blog-left, .blog-right {
+  -webkit-transform: rotateZ(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotateZ(90deg); }
+
+section#slide6 .blog-card {
+  width: 23.4375vw;
+  height: auto;
+  overflow: hidden; }
+
+section#slide6 .blog-date {
+  font-family: Proxima-light;
+  font-weight: bold;
+  font-size: 1.25vw;
+  color: #969696;
+  margin-bottom: 1em; }
+
+section#slide6 .blog-image img {
+  width: 23.4375vw;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  height: auto; }
+
+section#slide6 .show-more a {
+  text-decoration: none;
+  color: #1b00c5;
+  font-family: Proxima-light;
+  font-weight: bold;
+  font-size: 1.25vw;
+  padding: 1em 0; }
+
+section#slide6 .show-more:hover {
+  text-decoration: underline; }
+
+section#slide6 h2 {
+  font-size: 1.95313vw;
+  color: #150098;
+  font-family: Muller-bold;
+  margin: 20px 0; }
+
+section#slide6 p {
+  margin-top: 5px;
+  color: #434343;
+  font-family: Proxima-light;
+  font-size: 1.25vw; }
+
+.blog-nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -97px;
+  right: 9.76563vw;
+  z-index: 9999;
+  color: #000;
+  cursor: pointer;
+  text-align: center; }
 
 section#slide7 {
   background-color: #171420; }
