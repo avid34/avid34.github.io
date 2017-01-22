@@ -359,7 +359,6 @@ section#slide5 {
     min-height: 250px;
     width: 100%;
     margin: 0 auto;
-    padding: 1em 60px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
     section#slide5 .content ul {
@@ -394,6 +393,8 @@ section#slide5 {
       cursor: pointer;
       text-align: center;
       margin-top: -97px; }
+    section#slide5 .content .vertical-scroller {
+      padding: 1em 60px; }
 
 section#slide6 {
   padding-left: 0; }

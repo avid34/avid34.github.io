@@ -3,7 +3,15 @@ var isMobile = false;
 if ( siteWidth < 641 ) { isMobile = true;} 
 var vcounter = 1;
 $(document).ready(function() {
-
+if (isMobile) {
+	$('#slide1').before(function(index){return '<a name="page1"></a>';});
+	$('#slide2').before(function(index){return '<a name="page2"></a>';});
+	$('#slide3').before(function(index){return '<a name="page3"></a>';});
+	$('#slide4').before(function(index){return '<a name="page4"></a>';});
+	$('#slide5').before(function(index){return '<a name="page5"></a>';});
+	$('#slide6').before(function(index){return '<a name="page6"></a>';});
+	$('#slide7').before(function(index){return '<a name="page7"></a>';});
+}
 	//Инициализируем fullpage.js
 	if(!isMobile){
 	$('#fullpage').fullpage({
